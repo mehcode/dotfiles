@@ -1,3 +1,5 @@
+# Add Brew path
+PATH=/usr/local/bin:$PATH
 
 # Functions
 fpath=( "$HOME/.zsh/functions" "/usr/local/share/zsh-completions" $fpath )
