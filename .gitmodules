@@ -1,0 +1,6 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "gitalias"]
+	path = gitalias
+	url = https://github.com/GitAlias/gitalias

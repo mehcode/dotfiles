@@ -1,0 +1,9 @@
+[ghq]
+  root = ~/Workspace
+
+[include]
+  path = ~/.dotfiles/gitalias/gitalias.txt
+
+[user]
+	email = ryan@launchbadge.com
+	name = Ryan Leckey
