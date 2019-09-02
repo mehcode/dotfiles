@@ -7,3 +7,48 @@
 [user]
 	email = ryan@launchbadge.com
 	name = Ryan Leckey
+
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+
+[core]
+  excludesfile = ~/.gitignore
+  whitespace = blank-at-eol,blank-at-eof,space-before-tab
+  pager = diff-so-fancy | less --tabs=4 -RFX
+
+# Remember conflict resolution and re-apply when possible
+# https://medium.com/@porteneuve/fix-conflicts-only-once-with-git-rerere-7d116b2cec67
+[rerere]
+  enabled = true
+  autoupdate = true
+
+# Automatically stash before a rebase and unstash afterwards.
+[rebase]
+  autoStash = true
+
+# Rebase by default when pulling
+[pull]
+  rebase = true
+
+# Git extension for versioning large files
+# https://git-lfs.github.com/
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+# Use ssh urls to fetch private git dependencies for
+# go projects
+
+[url "git@gitlab.launchbadge.com:"]
+  insteadOf = https://gitlab.launchbadge.com/
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
