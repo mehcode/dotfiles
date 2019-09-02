@@ -1,0 +1,91 @@
+{
+    "layer": "top",
+    "height": 35,
+    "modules-left": ["sway/workspaces", "custom/spotify"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "custom/updates", "pulseaudio", "network", "custom/cpu", "memory", "custom/storage", "temperature", "clock"],
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "   <span foreground=\"#ffffff90\">{0:%a, %b %e}</span>   {0:%H:%M}"
+    },
+    "memory": {
+        "format": "   {}% ({used:.2f} GiB)"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "{icon}   {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "network": {
+        "format-wifi": "   {essid} ({signalStrength}%)",
+        "format-ethernet": "",
+        "format-linked": "",
+        "format-disconnected": "⚠   Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon:2}   {volume:4}%",
+        "format-alt": "{icon:2}   {volume:4}%",
+        "format-alt-click": "click-right",
+        "format-muted": "",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "interval": 5,
+        "format": "   {}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "on-click": "playerctl play-pause",
+        "escape": true
+    },
+    "custom/cpu": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/cpu.sh",
+        "format": "{icon}   {}",
+        "format-icons": [""],
+        "escape": true
+    },
+    "custom/storage": {
+        "interval": 60,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/storage.sh",
+        "format": "{icon}   {percentage}% ({} GiB)",
+        "format-icons": [""],
+        "escape": true
+    },
+    "custom/updates": {
+        "interval": 60,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/updates.sh",
+        "format": "{icon}  {}",
+        "format-icons": ["⋏"],
+        "escape": true
+    }
+}

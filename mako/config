@@ -1,0 +1,9 @@
+font=Source Sans Pro
+background-color=#121212
+icons=1
+padding=14
+width=450
+border-color=#757575
+border-size=2
+actions=1
+default-timeout=7500

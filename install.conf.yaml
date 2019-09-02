@@ -2,11 +2,13 @@
     link:
       relink: true
       create: true
+      force: true
 
 - clean: ['~']
 
 - link:
     ~/.gitconfig: gitconfig
-    # ~/.tmux.conf: tmux.conf
-    # ~/.vim: vim
-    # ~/.vimrc: vimrc
+    ~/.config/sway: sway
+    ~/.config/waybar: waybar
+    ~/.config/mako: mako
+    ~/.config/gtk-3.0: gtk-3.0

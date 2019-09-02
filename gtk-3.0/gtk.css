@@ -1,0 +1,5 @@
+/* Add inner padding to Termite (and all VTE GTK3 terminals) */
+/* https://github.com/thestinger/termite/issues/111#issuecomment-468033611 */
+VteTerminal, vte-terminal {
+    padding: 5px;
+}

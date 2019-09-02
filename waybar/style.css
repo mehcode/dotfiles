@@ -1,0 +1,83 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 13px;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+}
+
+/*
+ * Waybar
+ */
+
+window#waybar {
+  background: #121212;
+  color: rgb(217, 216, 216);
+}
+
+/* 
+ * Workspaces
+ */
+
+#workspaces {
+  margin: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: inherit;
+  border: none;
+  color: rgba(217, 216, 216, 0.4);
+  border-bottom: 2px solid transparent;
+  transition-duration: 0s;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  color: rgb(217, 216, 216);
+  transition-duration: 0s;
+  background-color: rgba(217, 216, 216, 0.1);
+}
+
+#workspaces button.focused {
+  border-bottom: 2px solid rgb(217, 216, 216);
+  background: rgba(217, 216, 216, 0.1);
+  color: rgb(217, 216, 216);
+}
+
+#workspaces button.urgent {
+  color: #eb4d4b;
+}
+
+/* 
+ * Modules
+ */
+
+#clock,
+#battery,
+#custom-cpu,
+#custom-storage,
+#custom-updates,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-spotify,
+#tray,
+#mode,
+#idle_inhibitor {
+  padding: 0 10px;
+  margin: 0 5px;
+  color: rgb(217, 216, 216);
+  background: rgba(217, 216, 216, 0.1);
+}
+
+#custom-updates {
+  color: #FFED66;
+  border-bottom: 2px solid #FFED66;
+}
