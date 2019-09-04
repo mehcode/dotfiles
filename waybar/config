@@ -3,7 +3,7 @@
     "height": 35,
     "modules-left": ["sway/workspaces", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/updates", "pulseaudio", "network", "custom/cpu", "memory", "custom/storage", "temperature", "clock"],
+    "modules-right": ["tray", "custom/updates", "pulseaudio", "network", "cpu", "custom/cpu_speed", "memory", "custom/storage", "temperature", "clock"],
     "sway/workspaces": {
         "disable-scroll": true
     },
@@ -17,6 +17,10 @@
     },
     "clock": {
         "format": "   <span foreground=\"#ffffff90\">{0:%a, %b %e}</span>   {0:%H:%M}"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "   {}%"
     },
     "memory": {
         "format": "   {}% ({used:.2f} GiB)"
@@ -64,12 +68,11 @@
         "on-click": "playerctl play-pause",
         "escape": true
     },
-    "custom/cpu": {
-        "interval": 1,
+    "custom/cpu_speed": {
+        "interval": 60,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/cpu.sh",
-        "format": "{icon}   {}",
-        "format-icons": [""],
+        "exec": "~/.config/waybar/modules/cpu_speed.sh",
+        "format": "{}",
         "escape": true
     },
     "custom/storage": {

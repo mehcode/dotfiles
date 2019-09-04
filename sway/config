@@ -15,7 +15,7 @@ set $right l
 set $term termite
 
 # Application launcher
-set $menu swaymsg exec GDK_BACKEND=x11 ulauncher-toggle
+set $menu exec wldash
 
 ###
 ### Output configuration
@@ -59,7 +59,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 # Start application launcher
-bindsym $mod+space exec env GDK_BACKEND=x11 ulauncher-toggle
+bindsym $mod+space $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -154,10 +154,21 @@ bindsym $mod+d focus mode_toggle
 # Move focus to the parent container
 bindsym $mod+a focus parent
 
-#
-# Status bar
-#
+###
+### Status bar
+###
 
 bar {
     swaybar_command waybar
 }
+
+###
+### Autostart
+###
+
+# JetBrains Toolbox
+# _JAVA_AWT_WM_NONREPARENTING=1 required for Intellij editors
+# exec env _JAVA_AWT_WM_NONREPARENTING=1 gtk-launch jetbrains-toolbox
+
+# Slack
+# exec slack

@@ -7,6 +7,7 @@
 [user]
 	email = ryan@launchbadge.com
 	name = Ryan Leckey
+	signingkey = BBDFC5595030E7D3
 
 [color]
   ui = auto
@@ -52,3 +53,5 @@
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
+[commit]
+	gpgsign = false

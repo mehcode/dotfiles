@@ -7,8 +7,15 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: gitconfig
     ~/.config/sway: sway
     ~/.config/waybar: waybar
     ~/.config/mako: mako
     ~/.config/gtk-3.0: gtk-3.0
+
+    # Git
+    ~/.gitconfig: gitconfig
+
+    # Fish
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/fish_variables: fish/fish_variables
